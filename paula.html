@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Perfil | Artes Cênicas</title>
+  <meta name="description" content="Portfólio profissional em artes cênicas e produção teatral.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="#top"><span id="header-name">Artista</span><small>Artes Cênicas</small></a>
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="index.html">← Home</a>
+        <a href="#espetaculos">Espetáculos</a>
+        <a href="#premios">Prêmios</a>
+        <a href="#gallery">Galeria</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="profile-hero">
+      <div class="container">
+        <div class="profile-photo"><img id="hero-photo" src="" alt=""></div>
+        <div class="profile-intro">
+          <span class="overline" id="hero-overline"></span>
+          <h1 id="hero-name"></h1>
+          <ul class="roles" id="roles"></ul>
+          <div class="bio" id="bio"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shows" id="espetaculos">
+      <div class="container">
+        <div class="section-head">
+          <span class="overline">Palco</span>
+          <h2 class="section-title">Espetáculos e Projetos</h2>
+          <div class="divider"></div>
+          <p>Fotos de cena, cartazes e ficha técnica de cada montagem. Deslize ou use as setas.</p>
+        </div>
+        <div id="shows-list"></div>
+      </div>
+    </section>
+
+    <section class="section" id="premios">
+      <div class="container">
+        <div class="section-head">
+          <span class="overline">Reconhecimento</span>
+          <h2 class="section-title">Prêmios e Honrarias</h2>
+          <div class="divider"></div>
+        </div>
+        <ul class="awards-list" id="awards-list"></ul>
+      </div>
+    </section>
+
+    <section class="section gallery" id="gallery">
+      <div class="container">
+        <div class="section-head">
+          <span class="overline">Acervo</span>
+          <h2 class="section-title">Galeria de Projetos</h2>
+          <div class="divider"></div>
+          <p>Escolha um projeto para ver suas fotos. Clique em uma foto para ampliar.</p>
+        </div>
+
+        <div class="gallery-grid fade-in" id="gallery-projects"></div>
+
+        <div id="gallery-detail" hidden>
+          <div class="gallery-bar">
+            <button type="button" class="btn" id="gallery-back">← Projetos</button>
+            <h3 id="gallery-title"></h3>
+          </div>
+          <div class="gallery-grid gallery-photos" id="gallery-photos"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 · Artes Cênicas · <a href="jumping.html" style="color:var(--gold)">Jumping Artistas</a></p>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualizador de imagem" aria-hidden="true">
+    <button type="button" class="lb-btn lb-close" id="lb-close" aria-label="Fechar">×</button>
+    <button type="button" class="lb-btn lb-prev" id="lb-prev" aria-label="Foto anterior">‹</button>
+    <img id="lb-img" src="" alt="">
+    <button type="button" class="lb-btn lb-next" id="lb-next" aria-label="Próxima foto">›</button>
+    <div class="lb-cap" id="lb-cap"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="paula-data.js"></script>
+  <script src="profile.js"></script>
+</body>
+</html>
